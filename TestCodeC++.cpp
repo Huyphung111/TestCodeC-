@@ -6,7 +6,12 @@ using namespace std;
 
 int main()
 {
-	cout << "XinChaoTuiCommit";
+    int n;
+    cout << "Hello World!\n";
+    cout << "Nhap vao n:";
+	cin >> n;
+	cout << "So nguyen duong " << n ;
     return 0;
+	cout << "XinChaoTuiCommit";
 }
 
