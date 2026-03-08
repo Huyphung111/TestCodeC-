@@ -6,11 +6,6 @@ using namespace std;
 
 int main()
 {
-    int n;
-    cout << "Hello World!\n";
-    cout << "Nhap vao n:";
-	cin >> n;
-	cout << "So nguyen am " << n ;
 	cout << "Test";
     int x;
     cout << "Hello Amonoggg!\n";
@@ -19,6 +14,5 @@ int main()
 	cout << "So nguyen am " << x ;
 	cout << "Hello Amonog2g!\n";
     return 0;
-	cout << "XinChaoTuiCommit";
 }
 
