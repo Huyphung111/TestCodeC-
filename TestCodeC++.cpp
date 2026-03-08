@@ -10,7 +10,7 @@ int main()
     cout << "Hello World!\n";
     cout << "Nhap vao n:";
 	cin >> n;
-	cout << "So nguyen duong " << n ;
+	cout << "So nguyen am " << n ;
     return 0;
 	cout << "XinChaoTuiCommit";
 }
