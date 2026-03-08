@@ -12,6 +12,5 @@ int main()
 	cin >> n;
 	cout << "So nguyen am " << n ;
     return 0;
-	cout << "XinChaoTuiCommit";
 }
 
