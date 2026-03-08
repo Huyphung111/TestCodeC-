@@ -2,9 +2,15 @@
 //
 
 #include <iostream>
+using namespace std;
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    int n;
+    cout << "Hello World!\n";
+    cout << "Nhap vao n:";
+	cin >> n;
+	cout << "So nguyen duong " << n ;
+    return 0;
 }
 
