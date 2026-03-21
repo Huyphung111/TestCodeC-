@@ -7,7 +7,6 @@ using namespace std;
 int main()
 {
     int n;
-    cout << "Hello World!\n";
     cout << "Nhap vao n:";
 	cin >> n;
 	do
