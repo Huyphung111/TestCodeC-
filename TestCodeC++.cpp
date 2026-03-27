@@ -16,7 +16,7 @@ int main()
 	else {
 		cout << n << " is odd." << endl;
 	}
-	//Heloo tui la phung tuan huy
+	//Heloo tui la phung tuan huyy
 }
 
 
