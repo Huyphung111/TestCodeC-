@@ -16,7 +16,7 @@ public:
         this->title = title;
         this->author = author;
     }
-
+    // tui da cap nhat
     int getId() {
         return id;
     }
