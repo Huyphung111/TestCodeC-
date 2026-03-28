@@ -3,7 +3,7 @@
 #include <string>
 using namespace std;
 
-// ================== CLASS BOOK ==================
+
 class Book {
 private:
     int id;
