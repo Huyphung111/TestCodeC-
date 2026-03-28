@@ -33,7 +33,6 @@ public:
     }
 };
 
-// ================== CLASS LIBRARY ==================
 class Library {
 private:
     vector<Book> books;
