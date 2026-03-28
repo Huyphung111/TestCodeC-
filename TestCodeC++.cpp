@@ -176,28 +176,4 @@ int main() {
     } while (choice != 0);
 
     return 0;
-    // Chương trình này bao gồm các lớp và phương thức phục vụ cho việc...
-
-// Lớp MyClass
-//class MyClass {
-//public:
-    // Phương thức khởi tạo
-   // MyClass();
-
-    // Phương thức thực hiện nhiệm vụ
-    //void doSomething();
-};
-
-// Constructor của MyClass
-MyClass::MyClass() {
-    // Khởi tạo các biến nếu cần thiết
-}
-
-// Phương thức thực hiện nhiệm vụ
-//void MyClass::doSomething() {
-    // Logic thực hiện nhiệm vụ
-}
-
-// Mô tả chương trình:
-// Chương trình này thực hiện các tác vụ trên dữ liệu và có thể được sử dụng để...
 }
