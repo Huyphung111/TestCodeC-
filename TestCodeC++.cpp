@@ -2,7 +2,7 @@
 #include <vector>
 #include <string>
 using namespace std;
-// ================== CLASS BOOK ==================
+
 int main()
 {
     int n;
@@ -52,7 +52,12 @@ public:
             << " | Author: " << author << endl;
     }
 };
-
+class !Test{
+    public:
+    void testFunction() {
+        cout << "This is a test function!" << endl;
+    }
+};
 class Library {
 private:
     vector<Book> books;
