@@ -11,25 +11,22 @@ private:
     string author;
 
 public:
-    Book(int id, string title, string author) {
-        this->id = id;
-        this->title = title;
-        this->author = author;
-    }
+    Book(int id, const string& title, const string& author) 
+        : id(id), title(title), author(author) {}
 
-    int getId() {
+    int getId() const {
         return id;
     }
 
-    string getTitle() {
+    const string& getTitle() const {
         return title;
     }
 
-    string getAuthor() {
+    const string& getAuthor() const {
         return author;
     }
 
-    void display() {
+    void display() const {
         cout << "ID: " << id
             << " | Title: " << title
             << " | Author: " << author << endl;
@@ -41,6 +38,10 @@ class Library {
 private:
     vector<Book> books;
 
+    bool isValidId(int id) const {
+        return id > 0;
+    }
+
 public:
     void addBook() {
         int id;
@@ -48,36 +49,55 @@ public:
 
         cout << "Nhap ID: ";
         cin >> id;
+
+        if (!isValidId(id)) {
+            cout << "ID khong hop le!\n";
+            cin.ignore(10000, '\n');
+            return;
+        }
+
         cin.ignore();
 
         cout << "Nhap ten sach: ";
         getline(cin, title);
 
+        if (title.empty()) {
+            cout << "Ten sach khong duoc trong!\n";
+            return;
+        }
+
         cout << "Nhap tac gia: ";
         getline(cin, author);
+
+        if (author.empty()) {
+            cout << "Tac gia khong duoc trong!\n";
+            return;
+        }
 
         books.push_back(Book(id, title, author));
         cout << "Da them sach!\n";
     }
 
-    void displayBooks() {
+    void displayBooks() const {
         if (books.empty()) {
             cout << "Danh sach rong!\n";
             return;
         }
 
-        for (auto b : books) {
+        cout << "\n=== DANH SACH SACH ===\n";
+        for (const auto& b : books) {
             b.display();
         }
     }
 
-    void searchBook() {
+    void searchBook() const {
         int id;
         cout << "Nhap ID can tim: ";
         cin >> id;
 
-        for (auto b : books) {
+        for (const auto& b : books) {
             if (b.getId() == id) {
+                cout << "\n=== KET QUA TIM KIEM ===\n";
                 b.display();
                 return;
             }
@@ -91,9 +111,10 @@ public:
         cout << "Nhap ID can xoa: ";
         cin >> id;
 
-        for (int i = 0; i < books.size(); i++) {
-            if (books[i].getId() == id) {
-                books.erase(books.begin() + i);
+        auto it = books.begin();
+        for (; it != books.end(); ++it) {
+            if (it->getId() == id) {
+                books.erase(it);
                 cout << "Da xoa!\n";
                 return;
             }
@@ -101,7 +122,22 @@ public:
 
         cout << "Khong tim thay!\n";
     }
+
+    size_t getBookCount() const {
+        return books.size();
+    }
 };
+
+// ================== MENU ==================
+void displayMenu() {
+    cout << "\n===== QUAN LY THU VIEN =====\n";
+    cout << "1. Them sach\n";
+    cout << "2. Hien thi danh sach\n";
+    cout << "3. Tim sach\n";
+    cout << "4. Xoa sach\n";
+    cout << "0. Thoat\n";
+    cout << "Chon: ";
+}
 
 // ================== MAIN ==================
 int main() {
@@ -109,14 +145,14 @@ int main() {
     int choice;
 
     do {
-        cout << "\n===== QUAN LY THU VIEN =====\n";
-        cout << "1. Them sach\n";
-        cout << "2. Hien thi danh sach\n";
-        cout << "3. Tim sach\n";
-        cout << "4. Xoa sach\n";
-        cout << "0. Thoat\n";
-        cout << "Chon: ";
-        cin >> choice;
+        displayMenu();
+        
+        if (!(cin >> choice)) {
+            cin.clear();
+            cin.ignore(10000, '\n');
+            cout << "Lua chon khong hop le!\n";
+            continue;
+        }
 
         switch (choice) {
         case 1:
