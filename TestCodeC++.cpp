@@ -15,14 +15,7 @@ int main()
 	} while (n == 0);
 	cout << "So nguyen am " << n ;
 	cout << "Test";
-    int x;
-    cout << "Hello Amonoggg!\n";
-    cout << "Nhap vao x:";
-	cin >> x;
-	cout << "So nguyen am ";
-	cout << "Hello Amonog2g!\n";
-    return 0;
-	cout << "XinChaoTuiCommit";
+    //Tui da thay doi code 
 
 // ================== MAIN ==================
 int main() {
