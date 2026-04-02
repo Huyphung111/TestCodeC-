@@ -15,8 +15,7 @@ int main()
 	} while (n == 0);
 	cout << "So nguyen am " << n ;
 	cout << "Test";
-    // tui sua lan 3
-// ================== MAIN ==================
+ 
 int main() {
     Library lib;
     int choice;
