@@ -15,7 +15,7 @@ int main()
 	} while (n == 0);
 	cout << "So nguyen am " << n ;
 	cout << "Test";
-    //Tui da thay doi code 
+    //THay doi ke may viet code sai ngu
 
 // ================== MAIN ==================
 int main() {
