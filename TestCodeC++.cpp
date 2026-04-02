@@ -55,7 +55,6 @@ public:
     }
 };
 
-// ================== MAIN PROGRAM ==================
 int main()
 {
     // Create a book using constructor
