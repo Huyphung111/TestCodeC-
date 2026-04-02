@@ -15,9 +15,7 @@ int main()
 	} while (n == 0);
 	cout << "So nguyen am " << n ;
 	cout << "Test";
-    //Tui thay doi code tot roi nha
-    //THay doi ke may viet code sai ngu
-
+    // tui sua lan 3
 // ================== MAIN ==================
 int main() {
     Library lib;
