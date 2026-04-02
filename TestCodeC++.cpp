@@ -12,48 +12,6 @@ private:
     int year;
     float price;
 
-public:
-    // Constructor
-    Book() {
-        title = "";
-        author = "";
-        isbn = "";
-        year = 0;
-        price = 0.0;
-    }
-
-    // Constructor with parameters
-    Book(string t, string a, string i, int y, float p) {
-        title = t;
-        author = a;
-        isbn = i;
-        year = y;
-        price = p;
-    }
-
-    // Setter methods
-    void setTitle(string t) { title = t; }
-    void setAuthor(string a) { author = a; }
-    void setISBN(string i) { isbn = i; }
-    void setYear(int y) { year = y; }
-    void setPrice(float p) { price = p; }
-
-    // Getter methods
-    string getTitle() { return title; }
-    string getAuthor() { return author; }
-    string getISBN() { return isbn; }
-    int getYear() { return year; }
-    float getPrice() { return price; }
-
-    // Display book information
-    void display() {
-        cout << "Tieu de: " << title << endl;
-        cout << "Tac gia: " << author << endl;
-        cout << "ISBN: " << isbn << endl;
-        cout << "Nam: " << year << endl;
-        cout << "Gia: " << price << endl;
-    }
-};
 
 int main()
 {
